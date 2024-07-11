@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parking.entry.EnterVehicleFormController">
+    <children>
+        <Label layoutX="50.0" layoutY="50.0" text="Vehicle Number:" />
+        <TextField fx:id="vehicleNumberField" layoutX="200.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
+        <Label layoutX="50.0" layoutY="100.0" text="Vehicle Type:" />
+         <RadioButton fx:id="twoWheelerRadioButton" layoutX="146.0" layoutY="99.0" text="2-Wheeler">
+         <toggleGroup>
+            <ToggleGroup fx:id="wheelerGroup" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></RadioButton>
+        <RadioButton fx:id="fourWheelerRadioButton" layoutX="242.0" layoutY="100.0" text="4-Wheeler" toggleGroup="$wheelerGroup">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font></RadioButton>
+        
+        
+
+
+        <Label layoutX="50.0" layoutY="150.0" text="Email ID:" />
+        <TextField fx:id="emailIdField" layoutX="200.0" layoutY="150.0" prefHeight="26.0" prefWidth="134.0" />
+
+        <Button alignment="CENTER" layoutX="138.0" layoutY="199.0" onAction="#handleSubmit" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #4a84f7;" text="Submit" textAlignment="CENTER" textFill="WHITE" />
+    </children>
+</AnchorPane>
